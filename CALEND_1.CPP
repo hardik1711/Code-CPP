@@ -11,6 +11,7 @@ hidemouse();
 void restrictmouse(int x1,int y1,int x2,int y2);
 void getmousestatus( int *button,int *x,int *y);
 void findday();
+void front();
 void menu();
 void cal();
 void main()
@@ -99,6 +100,25 @@ void findday()
   s=0;
   getch();
   menu();
+}
+void front()
+{
+  cleardevice();
+  int b,xx,yy;
+  initmouse();
+  restrictmouse(0,0,getmaxx(),getmaxy());
+  setbkcolor(3);
+    setcolor(6);
+  settextstyle(7,0,3);
+  outtextxy(10,50,"SHRI VAISHNAV VIDYAPEETH VISHWAVIDYALAYA ");
+  settextstyle(7,0,2);
+   outtextxy(20,80,"Shri Vaishnav Institute of Information Technology ");
+  settextstyle(7,0,3);
+    setcolor(4);
+  outtextxy(100,200," USER FRIENDLY CALENDAR");
+ // outtextxy(100,200,"=> EXIT");
+ 
+  getch();
 }
 void menu()
 {
